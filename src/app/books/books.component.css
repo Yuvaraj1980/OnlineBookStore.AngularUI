@@ -1,0 +1,10 @@
+.truncate {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    size: 20px;
+  }
+
+  .margin {
+    margin-left: 30px;
+  }

@@ -1,0 +1,24 @@
+<div>
+    <h1>
+               Order Books Details
+    </h1>
+    <h3>
+                Order ID : #{{OrdersData[0].OrderId}}
+    </h3>
+    <ng-container *ngFor="let booksData of OrdersData[0].OrderedBooksList">   
+        <div class="panel">
+            <div class="panel-body panelbody"> 
+                <div class="col-md-2"> <img src="{{booksData.BookSourceImagePath}}"
+                alt="avatar" height="200" width="250"></div>
+                <div class="col-md-8">
+                    <div> <span>ID: {{booksData.BookID}}</span> </div>
+                    <div> <span>Title: {{booksData.BookTitle}}</span> </div>
+                    <div> <span>Author:{{booksData.AuthorName}}</span> </div>
+                    <div> <span>Price: {{booksData.BookPrice}}</span> </div>
+                    <div> <span>ShortDescription: {{booksData.BookShortDescription}}</span> </div>
+                    <div> <span>LongDescription: {{booksData.BookLongDescription}}</span> </div>                   
+                </div>              
+            </div>
+        </div>
+    </ng-container>
+</div>

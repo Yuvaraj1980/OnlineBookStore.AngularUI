@@ -1,0 +1,29 @@
+<div>
+    <input class="col-md-2 marginright" style="float: right" value="View Orders" aria-label="View Orders"  type="submit" id="u_0_2" (click)=ViewOrders()>
+</div>
+
+<div>
+    <ng-container *ngFor="let booksData of BooksData">
+    <h3>
+        {{booksData.BookTitle}}
+    </h3>
+        <div class="panel">
+            <div class="panel-body panelbody"> 
+                <div class="col-md-2"> <img src="{{booksData.BookSourceImagePath}}"
+                alt="avatar" height="200" width="250"></div>
+                <div class="col-md-8">
+                    <div> <span>ID: {{booksData.BookID}}</span> </div>
+                    <div> <span>Title: {{booksData.BookTitle}}</span> </div>
+                    <div> <span>Author:{{booksData.AuthorName}}</span> </div>
+                    <div> <span>Price: {{booksData.BookPrice}}</span> </div>
+                    <div class="truncate"> <span>ShortDescription: {{booksData.BookShortDescription}}</span> </div>
+                    <div> <span>LongDescription: {{booksData.BookLongDescription}}</span> </div>                   
+                </div>
+                <input class="col-md-2 marginleft" value="Buy Now" aria-label="Buy Now"  type="submit" id="u_0_2" (click)=BuyBook(booksData)>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+     
